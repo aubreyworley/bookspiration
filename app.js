@@ -11,6 +11,7 @@ angular.module('bookspiration', [])
       $http.jsonp(url)
         .then(function (response) {
           console.log(response.data.items);
+          $scope.categories = '';
           $scope.books = response.data.items;
         }); 
     };
