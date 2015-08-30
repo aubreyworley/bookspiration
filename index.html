@@ -34,8 +34,16 @@
             <input type="text" ng-model="categories" class="form-control" placeholder="type any genre">
           </div>
           <input type="submit" value="Search" class="btn btn-primary">
+          <br>
+          <br>
         </form>
-        {{books}}
+        <br>
+        <br>
+        <div class="row" ng-show="books.length > 0" >
+          <div class="col-md-3" ng-repeat="book in books">
+            <img ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}">
+          </div>
+        </div>
       </div>
     </div>
   </div>
